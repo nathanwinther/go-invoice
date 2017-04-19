@@ -41,7 +41,7 @@
       {{end}}
       {{range $k, $v := .Hours}}<input id="hours{{$k}}" name="hours" type="submit" value="{{$k}}">{{end}}
     </form>
-    <form action="/invoice/close/{{.Company.Uuid}}" class="hidden" method="POST">
+    <form action="/invoice/close/{{.Company.Uuid}}" class="hidden" method="POST" onSubmit="return confirm('Close Timesheet?');">
       <input id="close" type="submit">
     </form>
   </div>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+{{template "head.html"}}
+</head>
+<body>
+  <div class="container history">
+    {{template "header.html"}}
+    {{$S3 := .S3}}
+    {{range .History}}
+    <p>
+      <a class="history__link" href="{{$S3}}{{.Url}}" target="_blank">{{.Enddate}}</a>
+    </p>
+    {{end}}
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+{{template "head.html"}}
+</head>
+<body>
+  <div class="container index">
+    {{template "header.html"}}
+    {{range .Company}}
+    <p>{{.Name}}</p>
+    <p>
+      <a class="std__button large__button" href="/invoice/{{.Uuid}}" title="Timesheet">
+        Timesheet
+      </a><a class="std__button left__button" href="/invoice/company/{{.Uuid}}" title="Edit">
+        Edit
+      </a><a class="std__button right__button" href="/invoice/history/{{.Uuid}}" title="History">
+        History
+      </a>
+    </p>
+    {{end}}
+    <p>
+      <a class="std__button large__button" href="/invoice/company" title="Create company">
+        Create Company
+      </a>
+    </p>
+  </div>
+</body>
+</html>
+

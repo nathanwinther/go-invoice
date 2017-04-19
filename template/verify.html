@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+{{template "head.html"}}
+</head>
+<body>
+  <div class="container verify">
+    {{if .Message}}
+    <h3 class="std__error">{{.Message}}</h3>
+    {{end}}
+    <form method="POST">
+      <p>
+        <label class="std__label" for="token">Enter Token</label>
+      </p>
+      <p>
+        <input class="std__input verify__input" id="token" maxlength="6" name="token" type="text">
+      </p>
+      <p>
+        <button class="std__button" type="submit">Verify</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>
+

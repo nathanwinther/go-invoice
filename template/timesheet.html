@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+{{template "head.html"}}
+</head>
+<body>
+  <div class="container index">
+    {{template "header.html"}}
+    <p>{{.Company.Name}}</p>
+    <p class="timesheet__total">{{.Company.Timesheet.Total}}</p>
+    <p>
+      <label class="std__button timesheet__button" for="close">
+        Close
+      </label><a class="std__button timesheet__button" href="/invoice/preview/{{.Company.Uuid}}" target="_blank">
+        Preview
+      </a><a class="std__button timesheet__button" href="/invoice/edit/{{.Company.Uuid}}">
+        Edit
+      </a>
+    </p>
+    <p>
+      {{with index .Company.Timesheet.Entries .Company.Timesheet.Selected}}
+      {{.DDDD}}
+      {{.Key}}
+      {{end}}
+    </p>
+    <p>
+      {{range $k, $v := .Hours}}<label class="std__button timesheet__hours{{if $v}} timesheet__hours--selected{{end}}" for="hours{{$k}}">{{$k}}</label>{{end}}
+    </p>
+    {{$uuid := .Company.Uuid}}
+    {{range .Company.Timesheet.Entries}}
+    <p class="timesheet__entry">
+      <a class="timesheet__entry_link{{if .Selected}} timesheet__entry_link--selected{{end}}" href="/invoice/{{$uuid}}/{{.Key}}">
+        <span class="timesheet__wday{{if .Today}} timesheet__wday--today{{end}}">{{.DDDD}}</span><br>
+        {{.Key}}{{if .Hours}} {{.Hours}}{{end}}
+      </a>
+    </p>
+    {{end}}
+    <form class="hidden" method="POST">
+      {{with index .Company.Timesheet.Entries .Company.Timesheet.Selected}}
+      <input name="key" value="{{.Key}}">
+      {{end}}
+      {{range $k, $v := .Hours}}<input id="hours{{$k}}" name="hours" type="submit" value="{{$k}}">{{end}}
+    </form>
+    <form action="/invoice/close/{{.Company.Uuid}}" class="hidden" method="POST">
+      <input id="close" type="submit">
+    </form>
+  </div>
+</body>
+</html>
+

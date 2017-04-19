@@ -1,0 +1,8 @@
+.DS_Store
+bin/**
+node_modules/**
+pkg/**
+src/github.com/**
+
+legacy/vendor/**
+legacy/invoice.db

@@ -1,0 +1,202 @@
+$back: #fff;
+$fore: #111;
+$font: Menlo, monospace;
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+  background-color: $back;
+  color: $fore;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: $font;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 20px auto;
+  padding: 0;
+  width: 300px;
+}
+
+.container form {
+  border: none 0;
+  margin: 0;
+  padding: 0;
+}
+
+.container p {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.header h1 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.header h1 a {
+  color: $fore;
+}
+
+.std__button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $back;
+  border: solid 1px $fore;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: $fore;
+  cursor: pointer;
+  font-family: $font;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.large__button {
+  display: block;
+  margin: 0 0 6px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.left__button {
+  display: inline-block;
+  margin: 0 3px 0 0;
+  padding: 12px 0;
+  width: 147px;
+}
+
+.right__button {
+  display: inline-block;
+  margin: 0 0 0 3px;
+  padding: 12px 0;
+  width: 147px;
+}
+
+.std__button:focus {
+  outline: none;
+}
+
+.std__error {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.std__input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $back;
+  border: solid 1px #ccc;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: $fore;
+  display: block;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  padding: 7px;
+  text-align: center;
+  width: 100%;
+}
+
+.std__input:focus {
+  outline: none;
+}
+
+.std__label {
+  display: block;
+}
+
+.history {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.history__link {
+  color: $fore;
+}
+
+.index {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.timesheet__total {
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.timesheet__button {
+  display: inline-block;
+  margin: 0 3px;
+  padding: 8px 0;
+  width: 90px;
+}
+
+.timesheet__hours {
+  display: inline-block;
+  height: 54px;
+  line-height: 54px;
+  margin: 2px;
+  padding: 0;
+  text-align: center;
+  width: 54px;
+}
+
+.timesheet__hours--selected {
+  background-color: #f00;
+  color: #fff;
+}
+
+p.timesheet__entry {
+  padding: 0 0 0 64px;
+  text-align: left;
+}
+
+.timesheet__entry_link {
+  color: $fore;
+  text-decoration: none;
+}
+
+.timesheet__wday {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.timesheet__wday--today {
+  color: #f00;
+}
+
+.verify {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.verify__input {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+}
+

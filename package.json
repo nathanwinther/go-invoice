@@ -1,0 +1,16 @@
+{
+  "name": "nathanwinther.info",
+  "version": "1.0.0",
+  "description": "Invoice",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.x",
+    "gulp-clean-css": "^3.0.x",
+    "gulp-sass": "^3.1.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Winther",
+  "license": "MIT"
+}
